@@ -11,6 +11,18 @@ WORKDIR /home/node/app
 # Copy the source code over
 COPY --chown=node:node . /home/node/app/
 
+## Development #################################################################
+# Define a development target that installs devDeps and runs in dev mode
+FROM base as development
+WORKDIR /home/node/app
+# Install (not ci) with dependencies, and for Linux vs. Linux Musl (which we use for -alpine)
+RUN npm install
+# Switch to the node user vs. root
+USER node
+# Expose port 3000
+EXPOSE 3000
+# Start the app in debug mode so we can attach the debugger
+CMD ["npm", "start"]
 
 ## Production ##################################################################
 # Also define a production target which doesn't use devDeps
@@ -26,4 +38,3 @@ FROM nginx:stable-alpine as deploy
 WORKDIR /home/node/app
 # Copy what we've installed/built from production
 COPY --chown=node:node --from=production /home/node/app/build /usr/share/nginx/html/
-
