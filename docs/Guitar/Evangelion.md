@@ -15,3 +15,6 @@ A|----------------------------------------------------------|
 E|----------------------------------------------------------|`
 
 ```
+
+Reference: 
+https://tabs.ultimate-guitar.com/tab/misc-cartoons/neon-genesis-evangelion-a-cruel-angels-thesis-tabs-67938
