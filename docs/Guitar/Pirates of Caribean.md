@@ -56,3 +56,5 @@ A|--------------------------------------------------|
 E|--------------------------------------------------|`
 
 ```
+
+https://tabs.ultimate-guitar.com/tab/misc-soundtrack/pirates-of-the-caribbean-hes-a-pirate-tabs-805330
