@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aaa/Test.md",
+                "file": "intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aaa/Test.md",
+                "file": "intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aaa/Test.md",
+                "file": "intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aaa/Test.md"
+                "file": "intro.md"
               }
             }
           }
@@ -151,7 +151,14 @@
   },
   "active": "480d5fe88992b9b9",
   "lastOpenFiles": [
-    "intro.md",
-    "aaa/Test.md"
+    "tutorial-extras/translate-your-site.md",
+    "tutorial-extras/img/localeDropdown.png",
+    "tutorial-extras/img/docsVersionDropdown.png",
+    "tutorial-extras/manage-docs-versions.md",
+    "tutorial-basics/deploy-your-site.md",
+    "tutorial-basics/create-a-document.md",
+    "tutorial-basics/congratulations.md",
+    "aaa/Test.md",
+    "intro.md"
   ]
 }
