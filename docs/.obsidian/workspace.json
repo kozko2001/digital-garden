@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "intro.md",
+                "file": "tutorial-basics/deploy-your-site.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "intro.md",
+                "file": "tutorial-basics/deploy-your-site.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "intro.md",
+                "file": "tutorial-basics/deploy-your-site.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "intro.md"
+                "file": "tutorial-basics/deploy-your-site.md"
               }
             }
           }
@@ -151,14 +151,15 @@
   },
   "active": "480d5fe88992b9b9",
   "lastOpenFiles": [
+    "tutorial-basics/create-a-page.md",
+    "tutorial-basics/create-a-blog-post.md",
+    "tutorial-basics/congratulations.md",
+    "intro.md",
     "tutorial-extras/translate-your-site.md",
     "tutorial-extras/img/localeDropdown.png",
     "tutorial-extras/img/docsVersionDropdown.png",
     "tutorial-extras/manage-docs-versions.md",
     "tutorial-basics/deploy-your-site.md",
-    "tutorial-basics/create-a-document.md",
-    "tutorial-basics/congratulations.md",
-    "aaa/Test.md",
-    "intro.md"
+    "tutorial-basics/create-a-document.md"
   ]
 }
