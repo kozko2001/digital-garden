@@ -24,7 +24,7 @@ Better create a **Dockerfile** with all the tools you need to work
 
 ### My Config in k8s
 
-```
+```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
