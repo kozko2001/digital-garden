@@ -1,6 +1,6 @@
 
 
-# Book - share like an artist
+# Share like an artist
 
 ## Chapter 0
 
