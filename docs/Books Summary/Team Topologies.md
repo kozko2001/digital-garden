@@ -1,4 +1,4 @@
-
+# Team Topologies
 
 ## Chapter 1 - Problem with org charts
 
@@ -64,7 +64,7 @@ If we could achieve low-bandwidth communication between teams and still build an
 
 If in the org, there is need to everybody approve something, or everybody to chip in into opinions, that would lead to monolithic architectures that are convoluted. Is better a cohesive view even if it's not your best ideal, that a mix and match between different visions.
 
-## Team First Thinking
+## 3. Team First Thinking
 
 **What is a team**: a stable group of 5 to 9 people who works toward a shared goal as a unit. A team has whole ownership of a value stream.
 
@@ -146,6 +146,225 @@ How can we increase team cognitive load
 - Change the management style from "How" to What even Why
 - Increase quality of developer experience
 - Use a platform that is explicitly designed to reduce cognitive load for teams that build software on top of it
-- 
+
+
+## Chapter 4. Static Team Topologies
+
+To get most of our teams as possible, we need to consciously design our teams, instead of organic.
+
+We should discourge team members o be shufled too much frequently. This leads to volatile teams assembled for projects, instead of team first approach that will build and mantain the projects.
+
+### Shape team intercommunication to enable flow and sensing
+
+Some organizations seem to assume that software delivery is one-way process, leading from specificiation to design, from design to coding, from coding to testin, from testing to releasing.
+
+Instead, teams that are exposed to live environment tend to address user-visible and operational problems much more rapidly.
+
+A team should have all the skills necessary, design, develop, test, deploy and operate. 
+
+Such team (cross-functional) can bring high value to an organization by delivering cross-component, customer-centric features much faster than multiple "component" teams. But for this to work... they need to be able to deliver features into production without waiting for other teams.
+
+### Product teams need a support system
+
+The key to remain autonomous is to convert external dependencies to non-blocking. For example is extremly difficult to ensure a separate QA team will be available to evaluate a new feature exactly when the product team finishes
+
+Non blocking dependencies, often take the form of self-service capabilities (example creating pipelines, onitoring tools) developed and mantained by other teams.
+
+Without that, product teams end up frequently waiting on "hard dependencies" to functional teams (like QA, infrastructure etc..). This increase the friction as product teams are pressured to deliver faster.
+
+### Cloud teams don't create application infrastructure
+
+Since product teams, need this self-service approach, they cannot wait for a cloud team to provision in the infrastructure. On the other hands, Cloud teams are accountable for complience  and risk and can't let the product teams build provision whatever they want.
+
+The solution: Cloud teams should provide a high-quality service that is able to provision the product-teams needs, with all the requirements, and product teams can only use this services.
+
+So, the design of the cloud is done by the Cloud team, but the provision is done  by the product team.
+
+
+## Chapter 5. The four fundamental Team topologies
+
+### Steam-aligned teams
+
+A stream is the continuous flow of work aligned to a business domain. This requires clarity of purpose and responsability so that multiple teams can coexist, each one with their own flow of work. This clarity helps to have a steady flow of work that the team can priotarize.
+
+
+
+- Is the primary team type in an organizations
+- The purpose of the other team types, is to reduce the burden of the stream-aligned teams
+- Cause they work on the delivery, they are closer to the customer and able to quickly incorporate feedback while monitoring their software in production
+
+Capabilities that all Stream aligned teams should have
+- Application security
+- Commercial and operational viability analysis
+- Design and Architecture
+- Development and Coding
+- Infrastructure and operability 
+- PRoduct management and ownership
+- Testing and quality assurance
+- User Experience
+
+Each of this capabilities should not map to and individual role in the team
+
+Team members should strive to achieve "autonomy, mastery and purpose"
+
+### Enabling teams
+
+Enable teams helps stream-aligned teams to use best-practices without the burden of having to investigate and experiment.
+
+Comes enabling-teams to the rescue. 
+
+The way enabling-teams works, is completly oposite to ivory towers, insteads of defining policies for all other teams, the idea is that they are in contact with all the teams, and when a team misses a capability they jump in, working hand by hand with the team.
+
+This way stream-aligned teams have autonomy.
+
+- They should listen to what stream-aligned teams need
+- Should try to stay ahead of the curve before the need is expected from stream-aligned team
+- Should acts as a messenger (new libraries, new bugs, this is unmantained better not use it anymore)
+- Occasionally help if internal or external services are too hard to work with
+- Promote learning in the whole organization (create communities)
+
+If you got a "architect" teams, the most sensible thing would be to transform it into an full time enabling team, let's help the actual dev to upskill their abilities instead of making policies.
+
+### Complicated-Subsystem Teams
+
+All organizations have complicated systems, and we don't want to pollute all our tech landscape with the complexity of our ERP.
+
+They know how the complicate systems work, and collaborate to build solutions together with the stream-aligned teams to create easier interfaces to use the system
+
+### Platform Teams
+
+The purpose of the platform team, is to enable stream-aligned teams to deliver work, with substantial autonomy. The stream-aligned team maintains full ownership of building, running and fixing the application in production.
+
+The platform teams provide internal services to reduce the cognitive-load for the stream-aligned teams to deliver the code to the users.
+
+Platform teams shoud have always in mind the "ease of use" of their internal services. They need to treat the services they offer as products, that are reliable, usable and fit for their purpose.
+
+### Avoid team siles in the flow of Change
+
+Generally speaking, teams composed only of people with a single functional expertise should be avoided if we want to deliver software rapidly and safely. Examples:
+
+- Testing // QA
+- Database administration
+- UX
+- Architecture
+
+### A good platform is "Just Big Enough" // Thinnest viable platform
+
+We don't need to go crazy creating a new platform, each thing we make we have to maintain and will be hard to replace and change.
+
+Instead is more interesting to have good standards, templates and well-proven best practices that Dev team can use to innovate.
+
+Specially with cloud, where we can outsource all this services, and what we need to do is to:
+
+> Make it easier for developer to do the right thing in the right way
+
+
+## Chapter 6. Choose team-first boundaries
+
+We want to align teams to the flow of work, meaning for most of the work, we want to minimize the number of teams that need to be involved (coordinated). In this way we increase autonomy and also minimize the wait times.
+
+Also to have high performance teams, autonomy and ownership is crucial, teams should own, nurture and improve systems under there umbrella. That means that finding the correct splits of systems to teams is a quite important decision.
+
+To split the tech landscape of systems to team boundaries, we will talk about "Fracture Planes" (places were is most easy to split things)
+
+### Fracture Place: Busines domain bounded context
+
+Bounded contexts is one of the artifacts of applying DDD, it would give us different subsistems that have an internal model and a business reason to exists.
+
+This are ideal ways to split the systems, cause you get clear business domain and therefore goals. 
+
+And with that, you align the teams with the work of flow (most work of a bounded context not need to be coordinated with other bounded contexts)
+
+### Fracture plane: Regulatory Compliance
+
+In highly regulated industries, regulatory requirements set hard borders for software. They force organizations to adopt specific mechanisms for auditing, testing etc...
+
+So maybe it makes sense that these systems have different deployments strategies (manual stepts etc...) that the rest of the system
+
+### Fracture plane: Change Cadence
+
+Spltting off the parts of the system that typically change at different speeds allow them to change more quickly.
+
+### Fracture plane: Team Location
+
+Use co-locations or true remote first approach
+
+With covid, that lost most of the sense.
+
+### Fracture plane: Risk
+
+Different risk profiles might coexist withtin a large monolith. Taking more risk means accepting a higher propability of system or outcome failure in favor of getting changes into the hands of customers faster.
+
+### Fracture plane: Performance Isolation
+
+### Fracture plane: Technology
+Technology is one of the typical ways to split teams, divide the team between frontends/backends.
+
+This split normally introduce more constraints, and reduce the flow of work, cause now you have dependencies for almost each work item, and the teams are less autonomous.
+
+### Fracture plane: User personas
+Dependending on the solutions provided, maybe different user personas need a set of different features.
+
+For example in tier price products, maybe a team could be focused on making the high end features that customers want to pay more for it (ie. security, data etc...) and another is doing basic features that will be used for more users.
+
+## Chapter 7: Team interaction modes
+
+One thing to be avoided is the need for all teams to communicate with all other teams to achieve their end.
+
+So it's important to consider how each team interact with each other. We think there should be 3 types of team interactions.
+
+- Collaboration: Working closely together with another team
+- X-as-a-Service: Consuming/providing something with minimal collaboration
+- Facilitating: Help another team to clear impediments.
+
+### Collaboration
+Collaboration interaction mode is suitable where a high deegree of adaptability or discovery is needed, particularly when expliring new technologies or techniques. That's because it avoids costly hand-off between teams.
+
+Be aware that collaboration should not be a long-term way to interact between teams, it should be during a limited time where both teams get the results of the discoveries. 
+
+Too much collaborations might be a sympthom of incorrect domain boundaries or incorrect mix of skills in a team.
+
+### X-as-a-service
+
+X-as-a-service is suited when there is no discovery going on, is clear what we need, and there is a team responsible for providing to the rest of the teams. 
+
+Teams provides an artifact (library, platform etc...) that just works lowering the cognitive load of the teams using it and also making them more predictable.
+
+There is great clarity on who own's what, and less context is needed between the teams.
+
+The team that provides, should have a strong sense of responsability towards the solution they provide. They should treat it like a real product, making sure they are building what teams need, priotarize accordingly, making sure it works as intended all the team and the ease of use (Dev Ex)
+
+### Facilitating
+
+Suited on siturations where a team would benefit from the active help of another team facilitating/coaching some aspect of their work
+
+The goal is to enable the teams to be more effective, learn more quickly etc...
+
+
+## Chapter 8: Evolve team structures with organizational sensing
+
+the configuration of teams need to  evolve, depending on the stage of the organization.
+
+The normal way is that teams **collaborate** a lot at the beginning as they are doing **discovering**. But this puts a more cogniteve load to both teams (both teams needs to understand the other side) but it worth it for the reduce lag it brings to the discovery. 
+
+X-as-a-service is better for when predictable delivery is more important than rapid discovery.
+
+So it's usual that teams first start very close collaboration, and then they move to X-as-a-service interaction
+
+Also close collaboration don't scale well across the organization, the aim should be to create well-defined platform that other teams can simply use.
+
+### Triggers for Team topologies evolution
+
+#### Software has grown too large for one team
+- System is too large for the team cognitive load
+- That means that changesi n specific part of the system are always done by the same team mates -> creating silos
+- that cna actually create hard dependencies on people instead of teams, increasing the risk of any development
+
+#### Delivery cadence is becoming slower
+- Feels like changes take more time to get to the users
+- Team is losing autonomy, possibly waiting for other teams to do some function (testing, platform etc...)
+
+
+#### Multiple business services rely on a large set of underlying services
 
 

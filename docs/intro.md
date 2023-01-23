@@ -4,5 +4,3 @@ slug: /
 ---
 
 Hello there!
-
-testing
