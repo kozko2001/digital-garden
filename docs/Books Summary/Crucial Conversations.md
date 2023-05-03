@@ -1,3 +1,5 @@
+# Crucial Conversations
+
 # Chapter 1
 
 Crucial conversation, one that has: high stakes, emotions and opposing opinions
