@@ -1,4 +1,4 @@
-# Gamin in Linux using Lutris
+# Gaming in Linux using Lutris
 
 Gaming in Linux is way better than was before, I would say is easier to be a gamer
 in a linux machine than in desktop right now.
