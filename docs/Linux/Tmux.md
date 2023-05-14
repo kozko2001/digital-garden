@@ -24,6 +24,8 @@ Leader: <ctrl-b> is the prefix of all actions
 - `<leader> c`: create window
 - `<leader> [`: enter scroll mode
 - - `ctrl-r`: start search reverse (up)
+- `<leader> s`: search sessions
+
 ## Plugins and configurations
 
 People can develop plugins for tmux, I suggest to use the TPM (Tmux Plugin manager)
@@ -34,7 +36,27 @@ And since tmux is a little bit barebone I am using oh-my-tmux which already inst
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux
 ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 ```
+## Plugins installed
 
+- tmux resurrect: stores configuration of the sessions so it can be restored later
+- tmux-continuum: stores the configuration of tmux-resurrect each 15 min
+- tmux-menus: a little helper with `leader \` to show a menu to do things :)
+- tmux-session-wizard: with `leader t`, shows a list of open sessions and most used folders to create new sessions
+
+added this to my `~/.tmux.conf.local`:
+
+````
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @continuum-restore 'on'
+set -g @plugin 'jaclu/tmux-menus'  ## launches with c-b \\
+set -g @plugin '27medkamal/tmux-session-wizard'
+
+set -g @session-wizard 't'
+````
+
+and you will need to install `fzf` and `zoxide` (zoxide keeps track of folders you actually use more)
+and restarted the terminal
 
 ## Troubleshoot
 
