@@ -11,7 +11,7 @@ Tmux is a multiplexer -> allows to use a single terminal as multiple ones
 
 ## Basic keybindings
 
-Leader: <ctrl-b> is the prefix of all actions
+Leader: `<ctrl-b>` is the prefix of all actions
 
 - `<leader> "`: create pane horitzontally
 - `<leader> %`: create pane vertically
