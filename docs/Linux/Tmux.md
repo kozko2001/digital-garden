@@ -53,6 +53,10 @@ set -g @plugin 'jaclu/tmux-menus'  ## launches with c-b \\
 set -g @plugin '27medkamal/tmux-session-wizard'
 
 set -g @session-wizard 't'
+
+set -g @plugin 'catppuccin/tmux'
+set -g @catppuccin_flavour 'latte'
+
 ````
 
 and you will need to install `fzf` and `zoxide` (zoxide keeps track of folders you actually use more)
